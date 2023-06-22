@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS orders(
     CONSTRAINT order_status_fk FOREIGN KEY(status_id) REFERENCES order_status(id)
 )
 ```
-
+    
 order_composition table
 ```roomsql
 CREATE TABLE IF NOT EXISTS order_composition(

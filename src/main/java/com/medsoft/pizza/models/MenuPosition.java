@@ -4,6 +4,7 @@ public class MenuPosition {
     private Integer id;
     private String name;
     private String description;
+    public MenuPosition(){}
 
     public MenuPosition(int id, String name, String description){
         this.id = id;
@@ -13,6 +14,9 @@ public class MenuPosition {
 
     public int getId(){
         return this.id;
+    }
+    public void setId(int id){
+        this.id = id;
     }
     public void setName(String name){
         this.name = name;

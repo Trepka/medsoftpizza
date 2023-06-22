@@ -12,13 +12,13 @@ public class JdbcConnection {
     private static Optional<Connection> connection = Optional.empty();
 
     public static Optional<Connection> getConnection(){
-        if(connection.isEmpty()) {
-            String url = "jdbc:postgresql://localhost:5433/medsoftpizza";
-            String user = "postgres";
-            String password = "postgres";
+        if (connection.isEmpty()) {
+            String url = DbConnectionConfig.url;
+            String username = DbConnectionConfig.username;
+            String password = DbConnectionConfig.password;
 
             try {
-                connection = Optional.ofNullable(DriverManager.getConnection(url, user, password));
+                connection = Optional.ofNullable(DriverManager.getConnection(url, username, password));
             } catch (SQLException e) {
                 LOGGER.log(Level.SEVERE, null, e);
             }

@@ -1,0 +1,4 @@
+development.driver=org.postgresql.Driver
+development.username=
+development.password=
+development.url=jdbc:postgresql://localhost:5433/medsoftpizza

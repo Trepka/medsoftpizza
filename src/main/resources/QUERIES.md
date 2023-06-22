@@ -50,3 +50,23 @@ INSERT INTO order_composition(order_id, menu_id) VALUES (2, 2);
 INSERT INTO order_composition(order_id, menu_id) VALUES (3, 2);
 INSERT INTO order_composition(order_id, menu_id) VALUES (3, 3);
 ```
+
+```roomsql
+SELECT m.id, i.name FROM ingredients i
+LEFT JOIN custom_pizza cp ON cp.ingredient_id = i.id
+LEFT JOIN menu m ON m.id = cp.menu_id
+WHERE m.id = 7;
+```
+```roomsql
+SELECT id FROM menu m
+LEFT JOIN order_composition oc ON oc.menu_id = m.id
+WHERE m.name = 'custom_pizza' AND oc.order_id = 1;
+```
+получение по 
+```roomsql
+SELECT m.id, i.name FROM ingredients i
+LEFT JOIN custom_pizza cp ON cp.ingredient_id = i.id
+LEFT JOIN menu m ON m.id = cp.menu_id
+LEFT JOIN order_composition oc ON oc.menu_id = m.id
+WHERE m.name = 'custom_pizza' AND oc.order_id = 1;
+```
