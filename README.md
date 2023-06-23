@@ -12,7 +12,7 @@
 - [Список эндпоинтов для создания заказа](#usageorder)
 
 ##  Установка
-Для корректной работы приложения необходимо создать файл "application.properties" в соответствии с файлом "application.properties.example" в директории [resources](src/main/resources/).
+Для корректной работы приложения необходимо создать файл "application.properties" в соответствии с файлом "application.properties.example" в директории [resources](src/main/resources/). Поднять базу можно используя [backup](assets).
 ## Entity Relationship Diagram
 ![ERD diagram](assets/images/Schemas.png)
 
@@ -91,3 +91,6 @@
 }
 ```
 * **/DELETE/orders/{id}** - удаление заказа по id.
+
+Получение списка ингредиентов для пользователя:
+* /GET/ingredient
