@@ -14,7 +14,7 @@
 ##  Установка
 Для корректной работы приложения необходимо создать файл "application.properties" в соответствии с файлом "application.properties.example" в директории [resources](src/main/resources/). Поднять базу можно используя [backup](assets).
 ## Entity Relationship Diagram
-![ERD diagram](assets/images/Schemas.png)
+![ERD diagram](assets/images/Schemas.PNG)
 
 ## Список эндпоинтов для создания позиции меню
 * **/GET/menu_position** - получение списка всех позиций из таблицы меню (за исключением позиций "пользовательских" пицц);
